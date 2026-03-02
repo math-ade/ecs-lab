@@ -1,9 +1,9 @@
 {
-    "executionRoleArn": "arn:aws:iam::<ACCOUNT-ID>:role/ecsTaskExecutionRole",
+    "executionRoleArn": "arn:aws:iam::582726398736:role/ecsTaskExecutionRole",
     "containerDefinitions": [
         {
             "name": "sample-website",
-            "image": "<IMAGE1_NAME>",
+            "image": "nginx",
             "essential": true,
             "portMappings": [
                 {

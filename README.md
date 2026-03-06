@@ -1,6 +1,6 @@
 # AWS ECS Blue/Green Deployment Lab 🚀
 
-This project demonstrates a production-grade CI/CD workflow for containerized applications using **Amazon ECS (Fargate)** and **AWS CodeDeploy**. It features an automated Blue/Green deployment strategy with manual intervention and traffic shifting verification.
+This project demonstrates a production-grade CI/CD workflow for containerized applications using **Amazon ECS (Fargate)** and **AWS CodeDeploy**.
 
 ## 📐 Architecture Diagram
 The following diagram represents the cloud infrastructure and deployment flow:
@@ -38,4 +38,21 @@ graph TD
     TG2 --> TaskGreen
     CD -- "Traffic Shift" --> ALB
     ECR -- "Image Pull" --> TaskGreen
-    Add Project Architecture and Log
+```
+
+## ✅ Deployment Validation & Logs
+*Note: Infrastructure was decommissioned post-testing for cost optimization.*
+
+### 1. Verifying Running Tasks
+```bash
+$ aws ecs list-tasks --cluster ecs-cluster --service-name my-service --desired-status RUNNING
+{
+    "taskArns": [
+        "arn:aws:ecs:us-east-1:582726398736:task/ecs-cluster/e1c4d47f494643938a0a5b7eddb03910"
+    ]
+}
+```
+
+---
+**Author:** [Adetunji Mathew Babatunde](http://www.linkedin.com)
+**Certifications:** AWS SAA, AWS DVA, AWS AI Practitioner.

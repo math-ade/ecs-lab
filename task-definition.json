@@ -1,0 +1,9 @@
+{
+    "family": "my-task",
+    "containerDefinitions": [
+        {
+            "name": "ecs-lab",
+            "image": "://582726398736.dkr.ecr.us-east-1.amazonaws.com"
+        }
+    ]
+}

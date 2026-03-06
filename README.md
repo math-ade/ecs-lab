@@ -38,3 +38,4 @@ graph TD
     TG2 --> TaskGreen
     CD -- "Traffic Shift" --> ALB
     ECR -- "Image Pull" --> TaskGreen
+Add Project Architecture and Log
